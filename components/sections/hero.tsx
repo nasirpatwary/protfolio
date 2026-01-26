@@ -1,17 +1,21 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Download, Github, Linkedin, Facebook, Twitter } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import Image from "next/image"
-import FloatingBadge from "../shared/FloatingBadgeProps"
+import { motion } from "framer-motion";
+import { Download, Github, Linkedin, Facebook, Twitter } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import FloatingBadge from "../shared/FloatingBadgeProps";
 
 const socialLinks = [
   { name: "GitHub", icon: Github, href: "https://github.com/nasirpatwary" },
-  { name: "LinkedIn", icon: Linkedin, href: "https://www.linkedin.com/in/nasir22" },
+  {
+    name: "LinkedIn",
+    icon: Linkedin,
+    href: "https://www.linkedin.com/in/nasir22",
+  },
   { name: "Facebook", icon: Facebook, href: "https://facebook.com" },
   { name: "Twitter", icon: Twitter, href: "https://twitter.com" },
-]
+];
 
 export function Hero() {
   return (
@@ -36,7 +40,7 @@ export function Hero() {
             >
               Hello, I&apos;m
             </motion.p>
-            
+
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -45,7 +49,7 @@ export function Hero() {
             >
               Nasir Hossain
             </motion.h1>
-            
+
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -54,7 +58,7 @@ export function Hero() {
             >
               Junior Full Stack Developer
             </motion.h2>
-            
+
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -62,8 +66,8 @@ export function Hero() {
               className="text-muted-foreground text-base sm:text-lg max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed"
             >
               I build accessible, pixel-perfect digital experiences for the web.
-              Passionate about creating beautiful and functional full-stack applications
-              that make a difference.
+              Passionate about creating beautiful and functional full-stack
+              applications that make a difference.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -85,30 +89,22 @@ export function Hero() {
             </motion.div>
 
             {/* Social Links */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8, duration: 0.6 }}
-              className="flex gap-4 justify-center lg:justify-start"
-            >
-              {socialLinks.map((social, index) => (
+            <div className="flex flex-wrap gap-3">
+              {socialLinks.map((social) => (
                 <motion.a
                   key={social.name}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.9 + index * 0.1 }}
-                  whileHover={{ scale: 1.15, y: -3 }}
+                  whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.95 }}
-                  className="p-3 rounded-full bg-secondary text-secondary-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                  className="p-3 rounded-xl bg-background border border-border text-muted-foreground hover:text-primary hover:border-primary/50 transition-all shadow-sm"
                   aria-label={social.name}
                 >
                   <social.icon className="h-5 w-5" />
                 </motion.a>
               ))}
-            </motion.div>
+            </div>
           </motion.div>
 
           {/* Profile Image */}
@@ -125,7 +121,7 @@ export function Hero() {
                 transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
                 className="absolute -inset-3 rounded-full border-2 border-dashed border-primary/30"
               />
-              
+
               {/* Image container */}
               <div className="relative mx-auto w-48 h-48 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden border-2 border-primary/20 bg-secondary shadow-2xl">
                 <Image
@@ -136,14 +132,30 @@ export function Hero() {
                   priority
                 />
               </div>
-               <FloatingBadge label="React" positionClasses="-right-4 top-0 md:top-1/4" delay={1} />
-                <FloatingBadge label="Node.js" positionClasses="-left-4 bottom-0 md:bottom-1/4" delay={1.2} />
-                <FloatingBadge label="Next.js" positionClasses="-left-4 top-0 md:top-1/4" delay={1.2} />
-                <FloatingBadge label="MongoDB" positionClasses="-right-4 bottom-0 md:bottom-1/3" delay={1.4} />
+              <FloatingBadge
+                label="React"
+                positionClasses="-right-4 top-0 md:top-1/4"
+                delay={1}
+              />
+              <FloatingBadge
+                label="Node.js"
+                positionClasses="-left-4 bottom-0 md:bottom-1/4"
+                delay={1.2}
+              />
+              <FloatingBadge
+                label="Next.js"
+                positionClasses="-left-4 top-0 md:top-1/4"
+                delay={1.2}
+              />
+              <FloatingBadge
+                label="MongoDB"
+                positionClasses="-right-4 bottom-0 md:bottom-1/3"
+                delay={1.4}
+              />
             </div>
           </motion.div>
         </div>
       </div>
     </section>
-  )
+  );
 }

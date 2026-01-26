@@ -85,9 +85,8 @@ export function Navbar() {
                   isScrolled ? "text-lg md:text-xl" : "text-xl md:text-2xl"
                 )}
               >
-                <span className="text-primary group-hover:text-foreground transition-colors">{"<"}</span>
-                <span className="text-foreground group-hover:text-primary transition-colors">JD</span>
-                <span className="text-primary group-hover:text-foreground transition-colors">{" />"}</span>
+
+                <span className="text-foreground group-hover:text-primary transition-colors">NASIR</span><span className="text-primary">.DEV</span>
               </Link>
             </motion.div>
 
