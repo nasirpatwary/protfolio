@@ -136,10 +136,10 @@ export function Hero() {
                   priority
                 />
               </div>
-               <FloatingBadge label="React" positionClasses="-right-4 top-1/4" delay={1} />
-                <FloatingBadge label="Node.js" positionClasses="-left-4 bottom-1/4" delay={1.2} />
-                <FloatingBadge label="Next.js" positionClasses="-left-4 top-1/4" delay={1.2} />
-                <FloatingBadge label="MongoDB" positionClasses="-right-4 bottom-1/3" delay={1.4} />
+               <FloatingBadge label="React" positionClasses="-right-4 top-0 md:top-1/4" delay={1} />
+                <FloatingBadge label="Node.js" positionClasses="-left-4 bottom-0 md:bottom-1/4" delay={1.2} />
+                <FloatingBadge label="Next.js" positionClasses="-left-4 top-0 md:top-1/4" delay={1.2} />
+                <FloatingBadge label="MongoDB" positionClasses="-right-4 bottom-0 md:bottom-1/3" delay={1.4} />
             </div>
           </motion.div>
         </div>
