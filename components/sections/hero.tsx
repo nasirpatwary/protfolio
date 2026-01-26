@@ -17,7 +17,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="min-h-[calc(100vh-4rem)] flex items-center justify-center py-12"
+      className="min-h-[calc(100vh-4rem)] flex items-center justify-center "
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -129,7 +129,7 @@ export function Hero() {
               {/* Image container */}
               <div className="relative mx-auto w-48 h-48 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden border-2 border-primary/20 bg-secondary shadow-2xl">
                 <Image
-                  src="/profile/m-removebg-preview.png"
+                  src="/profile/removebg-preview.png"
                   alt="Junior Full Stack Developer"
                   fill
                   className="object-cover"

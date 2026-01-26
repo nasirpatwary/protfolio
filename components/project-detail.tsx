@@ -62,7 +62,7 @@ export function ProjectDetail({ project }: { project: Project }) {
                 src={project.image || "/placeholder.svg"}
                 alt={project.title}
                 fill
-                className="object-cover"
+                className="object-center"
                 priority
               />
               {/* Fallback gradient */}

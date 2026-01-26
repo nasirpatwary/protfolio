@@ -35,7 +35,7 @@ function ProjectCard({
           src={project.image || "/placeholder"}
           alt={project.title}
           fill
-          className="object-cover group-hover:scale-110 transition-transform duration-700"
+          className="object-center group-hover:scale-110 transition-transform duration-700"
         />
         {/* Overlay with gradient */}
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

@@ -2,8 +2,7 @@
 
 import React from "react"
 
-import { motion } from "framer-motion"
-import { useInView } from "framer-motion"
+import { motion, useInView } from "framer-motion"
 import { useRef, useState } from "react"
 import { Mail, Phone, MessageCircle, Send, MapPin } from "lucide-react"
 import { Button } from "@/components/ui/button"

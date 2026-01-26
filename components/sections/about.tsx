@@ -52,7 +52,7 @@ export function About() {
           </div>
 
           {/* About Content */}
-          <div className="grid md:grid-cols-3 gap-8 items-start">
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto items-start">
             {/* Main Text */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}

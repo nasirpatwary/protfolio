@@ -1,7 +1,5 @@
 "use client"
 
-import React from "react"
-
 import { motion } from "framer-motion"
 import Link from "next/link"
 import { Github, Linkedin, Facebook, Twitter, Heart } from "lucide-react"
@@ -118,7 +116,7 @@ export function Footer() {
               {currentYear} John Doe. All rights reserved.
             </p>
             <p className="text-sm text-muted-foreground flex items-center gap-1">
-              Made with <Heart className="h-3 w-3 text-red-500 fill-red-500" /> using Next.js
+              Made with using Next.js
             </p>
           </motion.div>
         </div>
