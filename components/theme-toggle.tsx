@@ -39,13 +39,13 @@ export function ThemeToggle() {
     <Button
       variant="ghost"
       size="icon"
-      className="relative h-9 w-9"
+      className="relative size-8 cursor-pointer"
       onClick={toggleTheme}
     >
       {isDark ? (
-        <Sun className="h-[1.2rem] w-[1.2rem]" />
+        <Sun size={20} />
       ) : (
-        <Moon className="h-[1.2rem] w-[1.2rem]" />
+        <Moon size={20} />
       )}
       <span className="sr-only">Toggle theme</span>
     </Button>

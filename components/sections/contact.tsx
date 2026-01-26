@@ -113,7 +113,7 @@ export function Contact() {
               transition={{ delay: 0.4 }}
               className="lg:col-span-2 space-y-6"
             >
-              <div className="bg-card border border-border rounded-xl p-6 space-y-6">
+              <div className="bg-card border border-border rounded-xl p-4 md:p-6 space-y-6">
                 <h3 className="font-semibold text-foreground">
                   Contact Information
                 </h3>
@@ -151,7 +151,7 @@ export function Contact() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.8 }}
-                className="bg-primary/5 border border-primary/20 rounded-xl p-6"
+                className="bg-primary/5 border border-primary/20 rounded-xl p-4 md:p-6"
               >
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   I typically respond within 24-48 hours. For urgent inquiries,
@@ -169,7 +169,7 @@ export function Contact() {
             >
               <form
                 onSubmit={handleSubmit}
-                className="bg-card border border-border rounded-xl p-6 sm:p-8 space-y-6"
+                className="bg-card border border-border rounded-xl p-4 sm:p-8 space-y-6"
               >
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
@@ -222,7 +222,7 @@ export function Contact() {
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full"
+                  className="w-full cursor-pointer"
                   disabled={isSubmitting || isSubmitted}
                 >
                   {isSubmitting ? (

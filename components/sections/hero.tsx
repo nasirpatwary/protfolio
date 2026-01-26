@@ -127,23 +127,19 @@ export function Hero() {
               />
               
               {/* Image container */}
-              <div className="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden border-2 border-primary/20 bg-secondary shadow-2xl">
+              <div className="relative mx-auto w-48 h-48 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden border-2 border-primary/20 bg-secondary shadow-2xl">
                 <Image
-                  src="/profile/removebg-preview.png"
+                  src="/profile/m-removebg-preview.png"
                   alt="Junior Full Stack Developer"
                   fill
                   className="object-cover"
                   priority
                 />
-                {/* Fallback gradient overlay for placeholder */}
-                {/* <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                  <span className="text-6xl font-bold text-primary/40">A</span>
-                </div> */}
               </div>
                <FloatingBadge label="React" positionClasses="-right-4 top-1/4" delay={1} />
                 <FloatingBadge label="Node.js" positionClasses="-left-4 bottom-1/4" delay={1.2} />
                 <FloatingBadge label="Next.js" positionClasses="-left-4 top-1/4" delay={1.2} />
-                <FloatingBadge label="MongoDB" positionClasses="-right-2 bottom-1/3" delay={1.4} />
+                <FloatingBadge label="MongoDB" positionClasses="-right-4 bottom-1/3" delay={1.4} />
             </div>
           </motion.div>
         </div>
