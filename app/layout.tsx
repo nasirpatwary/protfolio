@@ -10,13 +10,13 @@ const rubik = Rubik(
 )
 
 export const metadata: Metadata = {
-  title: 'John Doe | Junior Full Stack Developer',
-  description: 'Portfolio of John Doe, a passionate Junior Full Stack Developer specializing in React, Next.js, Node.js, and modern web technologies.',
+  title: 'Nasir Hossain | Junior Full Stack Developer',
+  description: 'Portfolio of Nasir Hossain, a passionate Junior Full Stack Developer specializing in React, Next.js, Node.js, and modern web technologies.',
   keywords: ['Full Stack Developer', 'React', 'Next.js', 'Node.js', 'Web Developer', 'Portfolio'],
-  authors: [{ name: 'John Doe' }],
+  authors: [{ name: 'Nasir Hossain' }],
   openGraph: {
-    title: 'John Doe | Junior Full Stack Developer',
-    description: 'Portfolio of John Doe, a passionate Junior Full Stack Developer',
+    title: 'Nasir Hossain | Junior Full Stack Developer',
+    description: 'Portfolio of Nasir Hossain, a passionate Junior Full Stack Developer',
     type: 'website',
   },
     generator: 'v0.app'
