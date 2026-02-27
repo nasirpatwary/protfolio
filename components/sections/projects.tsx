@@ -150,7 +150,7 @@ export function Projects() {
 
   return (
     <section id="projects" className="py-20 md:py-28 bg-secondary/30">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 overflow-hidden">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}

@@ -18,7 +18,7 @@ export function About() {
 
   return (
     <section id="about" className="py-20 md:py-28 bg-secondary/30">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 overflow-hidden">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
@@ -52,7 +52,7 @@ export function About() {
           </div>
 
           {/* About Content */}
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto items-start">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto items-start">
             {/* Main Text */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}

@@ -21,7 +21,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="min-h-[calc(100vh-4rem)] flex items-center justify-center "
+      className="min-h-[calc(100vh-4rem)] flex items-center justify-center py-12 lg:py-0"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -89,7 +89,7 @@ export function Hero() {
             </motion.div>
 
             {/* Social Links */}
-            <div className="flex flex-wrap gap-3">
+            <div className="flex justify-center lg:justify-start flex-wrap gap-3">
               {socialLinks.map((social) => (
                 <motion.a
                   key={social.name}
