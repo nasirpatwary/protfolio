@@ -51,7 +51,7 @@ export function Footer() {
               NASIR<span className="text-primary">.DEV</span>
             </Link>
             <p className="text-muted-foreground text-base leading-relaxed max-w-sm mb-6">
-              Full Stack Developer specializing in React, Next.js, and Node.js. 
+              Full Stack Developer specializing in React, Next.js, TypeScript, and Node.js. 
               Turning complex problems into elegant, user-centric digital solutions.
             </p>
             <div className="flex items-center gap-2 text-sm text-muted-foreground">

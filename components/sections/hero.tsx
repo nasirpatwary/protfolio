@@ -149,7 +149,12 @@ export function Hero() {
               />
               <FloatingBadge
                 label="MongoDB"
-                positionClasses="-right-4 bottom-0 md:bottom-1/3"
+                positionClasses="md:-right-4 -right-8 bottom-20 md:bottom-1/3"
+                delay={1.4}
+              />
+              <FloatingBadge
+                label="TypeScript"
+                positionClasses="left-30 bottom-0"
                 delay={1.4}
               />
             </div>

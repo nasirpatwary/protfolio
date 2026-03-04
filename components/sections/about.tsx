@@ -71,7 +71,7 @@ export function About() {
               <p className="text-muted-foreground leading-relaxed">
                 I love working across the entire stack, from crafting beautiful, responsive 
                 user interfaces with <span className="text-primary font-medium">React</span> and{" "}
-                <span className="text-primary font-medium">Next.js</span>, to building robust 
+                <span className="text-primary font-medium">Next.js</span>, <span className="text-primary font-medium">TypeScript</span>, to building robust 
                 backend systems with <span className="text-primary font-medium">Node.js</span> and{" "}
                 <span className="text-primary font-medium">Express</span>. There&apos;s something 
                 incredibly satisfying about seeing both ends of an application work together 
