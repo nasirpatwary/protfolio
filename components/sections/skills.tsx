@@ -64,7 +64,6 @@ function SkillCard({
         {skills.map((skill) => (
           <motion.p
             key={skill.name}
-            rel="noopener noreferrer"
             whileHover={{ scale: 1.1, y: -2 }}
             whileTap={{ scale: 0.95, direction: 1 }}
             className="py-1.5 px-4 rounded-xl bg-white dark:bg-gray-950 border border-border text-muted-foreground hover:text-primary hover:border-primary/50 transition-all shadow-sm"

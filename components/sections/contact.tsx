@@ -221,7 +221,7 @@ export function Contact() {
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full cursor-pointer"
+                  className="w-full cursor-pointer hover:bg-foreground duration-300 transition-colors"
                   disabled={isSubmitting || isSubmitted}
                 >
                   {isSubmitting ? (

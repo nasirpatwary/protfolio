@@ -133,10 +133,10 @@ function ProjectCard({
         </div>
 
         {/* View Details Button */}
-        <Button asChild variant="outline" className="w-full group/btn border-primary/20 hover:bg-primary hover:text-primary-foreground bg-transparent">
+        <Button asChild variant="outline" className="w-full group/btn border-primary/20 hover:bg-primary hover:text-primary-foreground duration-300 transition-colors bg-transparent">
           <Link href={`/projects/${project.id}`}>
             View Details
-            <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
+            <ArrowRight className="ml-2 h-4 w-4 duration-300 group-hover/btn:translate-x-2 transition-transform" />
           </Link>
         </Button>
       </div>

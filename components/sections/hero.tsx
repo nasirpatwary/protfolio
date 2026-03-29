@@ -80,7 +80,7 @@ export function Hero() {
               transition={{ delay: 0.7, duration: 0.6 }}
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8"
             >
-              <Button asChild size="lg" className="gap-2">
+              <Button asChild size="lg" className="gap-2 hover:bg-foreground duration-300 transition-colors">
                 <a href="/resume.pdf" download>
                   <Download className="h-4 w-4" />
                   Download Resume
