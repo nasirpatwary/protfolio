@@ -13,7 +13,7 @@ const navItems = [
   { name: "About", href: "#about" },
   { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
-  { name: "Contact", href: "#contact" },
+  { name: "Contact", href: "#contact" }
 ]
 
 export function Navbar() {
@@ -136,7 +136,7 @@ export function Navbar() {
             </div>
 
             {/* Mobile Menu Button */}
-            <div className="flex md:hidden items-center gap-3">
+            <div className="flex md:hidden items-center">
               <ThemeToggle />
               <Button
                 variant="ghost"
@@ -154,7 +154,7 @@ export function Navbar() {
                       exit={{ rotate: 90, opacity: 0 }}
                       transition={{ duration: 0.2 }}
                     >
-                      <X className="h-5 w-5" />
+                      <X />
                     </motion.div>
                   ) : (
                     <motion.div
@@ -164,7 +164,7 @@ export function Navbar() {
                       exit={{ rotate: -90, opacity: 0 }}
                       transition={{ duration: 0.2 }}
                     >
-                      <Menu className="h-5 w-5" />
+                      <Menu />
                     </motion.div>
                   )}
                 </AnimatePresence>

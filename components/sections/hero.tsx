@@ -5,6 +5,7 @@ import { Download, Github, Linkedin, Facebook, Twitter } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import FloatingBadge from "../shared/FloatingBadgeProps";
+import ParticlesContainer from "../shared/ParticlesContainer";
 
 const socialLinks = [
   { name: "GitHub", icon: Github, href: "https://github.com/nasirpatwary" },
@@ -21,8 +22,10 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="min-h-[calc(100vh-4rem)] flex items-center justify-center py-12 lg:py-0"
+      className="min-h-[calc(100vh-4rem)] relative flex items-center justify-center py-12 lg:py-0"
     >
+      {/* Particles শুধুমাত্র এই সেকশনের ব্যাকগ্রাউন্ড হিসেবে থাকবে */}
+      <ParticlesContainer />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Text Content */}
@@ -97,7 +100,7 @@ export function Hero() {
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.1, y: -2 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileTap={{ scale: 0.95, direction: 1}}
                   className="p-3 rounded-xl bg-background border border-border text-muted-foreground hover:text-primary hover:border-primary/50 transition-all shadow-sm"
                   aria-label={social.name}
                 >

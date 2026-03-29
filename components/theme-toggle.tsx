@@ -1,53 +1,19 @@
 "use client"
 
-import * as React from "react"
 import { Moon, Sun } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { useTheme } from "next-themes"
 
 export function ThemeToggle() {
-  const [isDark, setIsDark] = React.useState(true)
-  const [mounted, setMounted] = React.useState(false)
-
-  React.useEffect(() => {
-    setMounted(true)
-    const html = document.documentElement
-    setIsDark(html.classList.contains("dark"))
-  }, [])
-
-  const toggleTheme = () => {
-    const html = document.documentElement
-    if (html.classList.contains("dark")) {
-      html.classList.remove("dark")
-      setIsDark(false)
-      localStorage.setItem("theme", "light")
-    } else {
-      html.classList.add("dark")
-      setIsDark(true)
-      localStorage.setItem("theme", "dark")
-    }
-  }
-
-  if (!mounted) {
-    return (
-      <Button variant="ghost" size="icon" className="h-9 w-9">
-        <span className="sr-only">Toggle theme</span>
-      </Button>
-    )
-  }
+  const { theme, setTheme } = useTheme()
 
   return (
-    <Button
-      variant="ghost"
-      size="icon"
-      className="relative size-8 cursor-pointer"
-      onClick={toggleTheme}
+    <button
+      onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+      className="cursor-pointer p-1 rounded-full bg-gray-100 dark:bg-gray-800 transition-all border border-gray-200 dark:border-gray-700"
     >
-      {isDark ? (
-        <Sun size={20} />
-      ) : (
-        <Moon size={20} />
-      )}
+      <Sun className="size-3 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0 text-yellow-500" />
+      <Moon className="absolute top-1/2 -translate-y-1/2 size-3  rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100 text-blue-400" />
       <span className="sr-only">Toggle theme</span>
-    </Button>
+    </button>
   )
 }

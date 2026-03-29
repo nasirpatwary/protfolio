@@ -7,6 +7,7 @@ const Input = React.forwardRef<HTMLInputElement, React.ComponentProps<"input">>(
   ({ className, type = "text", ...props }, ref) => {
     return (
       <input
+      suppressHydrationWarning
         ref={ref}
         type={type}
         data-slot="input"
