@@ -347,7 +347,7 @@ export const projects: Project[] = [
       server: ["Vercel"],
     },
 
-    liveUrl: "https://your-library-app.vercel.app",
+    liveUrl: "https://create-new-library.vercel.app",
 
     githubUrl: {
       client: "https://github.com/nasirpatwary/create-new-library",
