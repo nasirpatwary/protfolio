@@ -23,16 +23,20 @@ const skillCategories = [
       { name: "Node.js" },
       { name: "Express.js" },
       { name: "MongoDB" },
+      { name: "NextAuth" },
+      { name: "JWT" },
       { name: "Firebase" },
     ],
   },
   {
     title: "Tools & DevOps",
     skills: [
-      { name: "Git & GitHub" },
       { name: "Postman" },
       { name: "VS Code" },
+      { name: "Netlify" },
       { name: "Vercel" },
+      { name: "Git & GitHub" },
+      { name: "Thunder Client" },
     ],
   },
 ];
@@ -66,7 +70,7 @@ function SkillCard({
             key={skill.name}
             whileHover={{ scale: 1.1, y: -2 }}
             whileTap={{ scale: 0.95, direction: 1 }}
-            className="py-1.5 px-4 rounded-xl bg-white dark:bg-gray-950 border border-border text-muted-foreground hover:text-primary hover:border-primary/50 transition-all shadow-sm"
+            className="py-1.5 px-4 text-sm rounded-xl bg-white dark:bg-gray-950 border border-border text-muted-foreground hover:text-primary hover:border-primary/50 transition-all shadow-sm"
             aria-label={skill.name}
           >
             <span>{skill.name}</span>

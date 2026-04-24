@@ -21,9 +21,9 @@ export default function FloatingBadge({
         opacity: { delay, duration: 0.5 },
         y: { duration: 3, repeat: Infinity, ease: "easeInOut" },
       }}
-      className={`absolute ${positionClasses} px-3 py-1.5 bg-card border border-border rounded-full shadow-lg`}
+      className={`absolute ${positionClasses} px-3 py-1 bg-card border border-border rounded-full shadow-lg`}
     >
-      <span className="text-sm font-medium text-foreground">{label}</span>
+      <span className="text-sm text-foreground">{label}</span>
     </motion.div>
   )
 }

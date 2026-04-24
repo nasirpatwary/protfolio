@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import FloatingBadge from "../shared/FloatingBadgeProps";
 import ParticlesContainer from "../shared/ParticlesContainer";
+import { Ripple } from "@/components/ui/ripple"
 
 const socialLinks = [
   { name: "GitHub", icon: Github, href: "https://github.com/nasirpatwary" },
@@ -15,7 +16,6 @@ const socialLinks = [
     href: "https://www.linkedin.com/in/nasir22",
   },
   { name: "Facebook", icon: Facebook, href: "https://facebook.com" },
-  { name: "Twitter", icon: Twitter, href: "https://twitter.com" },
 ];
 
 export function Hero() {
@@ -33,7 +33,7 @@ export function Hero() {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="text-center lg:text-left order-2 lg:order-1"
+            className="order-2 lg:order-1"
           >
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -59,14 +59,13 @@ export function Hero() {
               transition={{ delay: 0.5, duration: 0.6 }}
               className="text-xl sm:text-2xl lg:text-3xl font-semibold text-primary mb-6"
             >
-              Junior Full Stack Developer
+            Junior Full Stack Developer
             </motion.h2>
-
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.6 }}
-              className="text-muted-foreground text-base sm:text-lg max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed"
+              className="text-muted-foreground text-base sm:text-lg max-w-xl mb-8 leading-relaxed"
             >
               I build accessible, pixel-perfect digital experiences for the web.
               Passionate about creating beautiful and functional full-stack
@@ -78,7 +77,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7, duration: 0.6 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8"
+              className="flex flex-col sm:flex-row gap-4 mb-8"
             >
               <Button asChild size="lg" className="gap-2 hover:bg-foreground duration-300 transition-colors">
                 <a href="/resume.pdf" download>
@@ -92,7 +91,7 @@ export function Hero() {
             </motion.div>
 
             {/* Social Links */}
-            <div className="flex justify-center lg:justify-start flex-wrap gap-3">
+            <div className="flex flex-wrap gap-3">
               {socialLinks.map((social) => (
                 <motion.a
                   key={social.name}
@@ -122,11 +121,11 @@ export function Hero() {
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-                className="absolute -inset-3 rounded-full border-2 border-dashed border-primary/30"
+                className="absolute -inset-3 rounded-full border-2 border-dashed border-primary/30 md:hidden"
               />
-
               {/* Image container */}
-              <div className="relative mx-auto w-48 h-48 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden border-2 border-primary/20 bg-secondary shadow-2xl">
+              <div className="relative mx-auto w-48 h-48 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden border-2 border-primary/20 md:border-0 bg-secondary/30 shadow-2xl">
+              <Ripple />
                 <Image
                   src="/profile/removebg-preview.png"
                   alt="Junior Full Stack Developer"

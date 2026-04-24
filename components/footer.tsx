@@ -2,13 +2,12 @@
 
 import { motion } from "framer-motion"
 import Link from "next/link"
-import { Github, Linkedin, Facebook, Twitter, Heart, Mail, MapPin } from "lucide-react"
+import { Github, Linkedin, Facebook, Heart, MapPin } from "lucide-react"
 
 const socialLinks = [
   { name: "GitHub", icon: Github, href: "https://github.com/nasirpatwary" },
   { name: "LinkedIn", icon: Linkedin, href: "https://www.linkedin.com/in/nasir22" },
-  { name: "Twitter", icon: Twitter, href: "https://twitter.com/yourhandle" },
-  { name: "Email", icon: Mail, href: "mailto:hello@nasir.dev" },
+   { name: "Facebook", icon: Facebook, href: "https://facebook.com" }
 ]
 
 const navLinks = [

@@ -3,14 +3,14 @@
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef } from "react"
-import { Code2, Coffee, Gamepad2, Music } from "lucide-react"
+import { BookOpen, Brain, Code2, Coffee, Cpu, Gamepad2, Music, Rocket } from "lucide-react"
 
 const highlights = [
-  { icon: Code2, label: "Clean Code Enthusiast" },
-  { icon: Coffee, label: "Coffee Powered" },
-  { icon: Gamepad2, label: "Gaming Hobbyist" },
-  { icon: Music, label: "Music Lover" },
-]
+  { icon: Code2, label: "Crafting Clean & Efficient Code" },
+  { icon: Brain, label: "Problem Solving & Logical Thinking" },
+  { icon: Cpu, label: "Dedicated to System Performance" },
+  { icon: BookOpen, label: "Lifelong Learning & Growth" },
+];
 
 export function About() {
   const ref = useRef(null)
@@ -124,7 +124,7 @@ export function About() {
                     <p className="text-xs text-muted-foreground">Projects</p>
                   </div>
                   <div>
-                    <p className="text-2xl font-bold text-primary">2+</p>
+                    <p className="text-2xl font-bold text-primary">3+</p>
                     <p className="text-xs text-muted-foreground">Years Exp</p>
                   </div>
                 </div>

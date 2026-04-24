@@ -53,7 +53,7 @@ export function Navbar() {
   return (
     <>
       {/* Spacer for fixed navbar */}
-      <div className={cn("transition-all duration-300", isScrolled ? "h-14 md:h-16" : "h-16 md:h-20")} />
+      <div className={cn("transition-all duration-300", isScrolled ? "h-14" : "h-16")} />
       
       <motion.header
         initial={{ y: -100, opacity: 0 }}

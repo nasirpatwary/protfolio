@@ -1,32 +1,34 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { useInView } from "framer-motion"
-import { useRef } from "react"
-import Image from "next/image"
-import Link from "next/link"
-import { ArrowRight, ExternalLink, Github } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { projects } from "@/lib/projects"
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight, ExternalLink, Github } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { projects } from "@/lib/projects";
 
 function ProjectCard({
   project,
   index,
 }: {
-  project: (typeof projects)[0]
-  index: number
+  project: (typeof projects)[0];
+  index: number;
 }) {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-50px" })
-
-  const allTech = [...project.techStack.client, ...project.techStack.server]
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
     <motion.div
       ref={ref}
       initial={{ opacity: 0, y: 50, scale: 0.95 }}
       animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
-      transition={{ duration: 0.6, delay: index * 0.15, ease: [0.22, 1, 0.36, 1] }}
+      transition={{
+        duration: 0.6,
+        delay: index * 0.15,
+        ease: [0.22, 1, 0.36, 1],
+      }}
       className="group bg-card border border-border rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:border-primary/30 transition-all duration-500"
     >
       {/* Project Image */}
@@ -39,7 +41,7 @@ function ProjectCard({
         />
         {/* Overlay with gradient */}
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-        
+
         {/* Quick action buttons on hover */}
         <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-all duration-300">
           <motion.a
@@ -71,7 +73,7 @@ function ProjectCard({
         {/* Full Stack Badge */}
         <div className="absolute top-3 left-3">
           <span className="px-3 py-1 text-xs font-semibold bg-primary/90 text-primary-foreground rounded-full backdrop-blur-sm">
-            Full Stack
+            {project.category}
           </span>
         </div>
 
@@ -94,9 +96,11 @@ function ProjectCard({
 
         {/* Client Side Tech */}
         <div className="mb-3">
-          <p className="text-xs font-semibold text-primary mb-1.5">Client Side</p>
+          <p className="text-xs font-semibold text-primary mb-1.5">
+            Client Side
+          </p>
           <div className="flex flex-wrap gap-1.5">
-            {project.techStack.client.slice(0, 3).map((tech) => (
+            {project.techStack?.client?.slice(0, 3).map((tech) => (
               <span
                 key={tech}
                 className="px-2 py-0.5 text-xs font-medium bg-primary/10 text-primary rounded-md"
@@ -104,9 +108,9 @@ function ProjectCard({
                 {tech}
               </span>
             ))}
-            {project.techStack.client.length > 3 && (
+            {project.techStack?.client?.length > 3 && (
               <span className="px-2 py-0.5 text-xs font-medium bg-secondary text-muted-foreground rounded-md">
-                +{project.techStack.client.length - 3}
+                +{project.techStack?.client.length - 3}
               </span>
             )}
           </div>
@@ -114,9 +118,11 @@ function ProjectCard({
 
         {/* Server Side Tech */}
         <div className="mb-4">
-          <p className="text-xs font-semibold text-muted-foreground mb-1.5">Server Side</p>
+          <p className="text-xs font-semibold text-muted-foreground mb-1.5">
+            Server Side
+          </p>
           <div className="flex flex-wrap gap-1.5">
-            {project.techStack.server.slice(0, 3).map((tech) => (
+            {project.techStack?.server?.slice(0, 3).map((tech) => (
               <span
                 key={tech}
                 className="px-2 py-0.5 text-xs font-medium bg-secondary text-secondary-foreground rounded-md"
@@ -124,16 +130,20 @@ function ProjectCard({
                 {tech}
               </span>
             ))}
-            {project.techStack.server.length > 3 && (
+            {(project.techStack.server?.length ?? 0) > 3 && (
               <span className="px-2 py-0.5 text-xs font-medium bg-secondary text-muted-foreground rounded-md">
-                +{project.techStack.server.length - 3}
+                +{(project.techStack.server?.length ?? 0) - 3}
               </span>
             )}
           </div>
         </div>
 
         {/* View Details Button */}
-        <Button asChild variant="outline" className="w-full group/btn border-primary/20 hover:bg-primary hover:text-primary-foreground duration-300 transition-colors bg-transparent">
+        <Button
+          asChild
+          variant="outline"
+          className="w-full group/btn border-primary/20 hover:bg-primary hover:text-primary-foreground duration-300 transition-colors bg-transparent"
+        >
           <Link href={`/projects/${project.id}`}>
             View Details
             <ArrowRight className="ml-2 h-4 w-4 duration-300 group-hover/btn:translate-x-2 transition-transform" />
@@ -141,12 +151,12 @@ function ProjectCard({
         </Button>
       </div>
     </motion.div>
-  )
+  );
 }
 
 export function Projects() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
     <section id="projects" className="py-20 md:py-28 bg-secondary/30">
@@ -187,8 +197,8 @@ export function Projects() {
               transition={{ delay: 0.5 }}
               className="mt-4 text-muted-foreground max-w-2xl mx-auto"
             >
-              Here are some of the projects I&apos;ve worked on. Each one represents
-              a unique challenge and learning experience.
+              Here are some of the projects I&apos;ve worked on. Each one
+              represents a unique challenge and learning experience.
             </motion.p>
           </div>
 
@@ -201,5 +211,5 @@ export function Projects() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

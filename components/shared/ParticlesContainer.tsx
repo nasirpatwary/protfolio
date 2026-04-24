@@ -6,7 +6,6 @@ import { useTheme } from "next-themes"; // এটি ইম্পোর্ট �
 
 const ParticlesContainer = () => {
   const { resolvedTheme, themes } = useTheme(); // বর্তমান থিম (light বা dark) বের করার জন্য
-  console.log("textting themes", themes);
   const particleColor = resolvedTheme === "dark" ? "#ffffff" : "#000000";
   const particlesInit = useCallback(async (engine: Engine) => {
     console.log(engine);

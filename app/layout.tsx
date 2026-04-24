@@ -2,9 +2,9 @@ import React from "react";
 import type { Metadata } from "next";
 import { Rubik } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
-import "./globals.css";
 import { ThemeProvider } from "@/lib/provider";
-
+import "./globals.css"
+import 'animate.css';
 const rubik = Rubik({ subsets: ["latin"], variable: "--font-rubik" });
 
 export const metadata: Metadata = {
